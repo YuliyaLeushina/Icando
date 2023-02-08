@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230208102627">
+	<title>Верстка «ICanDo»</title>
+</head>
+<style>
+	@charset "UTF-8";
+	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+
+	*,
+	*::before,
+	*::after {
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		min-width: 320px;
+		width: 100%;
+		color: #fff;
+		background-color: #5e5373;
+	}
+
+	body {
+		font-family: Montserrat;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 1rem;
+	}
+
+	a {
+		text-decoration: underline;
+		color: #ebe691
+	}
+
+	a:visited {
+		text-decoration: underline;
+		color: #aaa768;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	ul li {
+		list-style: none;
+	}
+
+	img {
+		vertical-align: top;
+	}
+
+	.wrapper {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+	}
+
+	.rootpage {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	@media (max-width: 767px) {
+		.rootpage {
+			padding: 30px 15px;
+		}
+	}
+
+	h1 {
+		color: #ebe691;
+		font-size: 2.5rem;
+		margin: 0px 0px 1.25rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h1 {
+			font-size: 1.85rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+	}
+
+	h2 {
+		color: #ebe691;
+		font-size: 1.25rem;
+		margin: 0px 0px 1rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h2 {
+			font-size: 1.125rem;
+			margin: 0px 0px 1rem 0px;
+		}
+	}
+
+	.rootpage__info {
+		line-height: 140%;
+		margin: 0px 0px 1.5rem 0px;
+	}
+
+	.rootpage__list {
+		margin: 0px 0px 2.25rem 1.25rem;
+	}
+
+	.rootpage__list li:not(:last-child) {
+		margin: 0px 0px 15px 0px;
+	}
+
+	.rootpage__contacts,
+	.rootpage__tnx {
+		border-radius: 200px;
+		padding: 20px 65px;
+		line-height: 140%;
+	}
+
+	@media (max-width: 767px) {
+
+		.rootpage__contacts,
+		.rootpage__tnx {
+			border-radius: 40px;
+			padding: 20px;
+		}
+	}
+
+	.rootpage__contacts {
+		background: #32b5a4;
+
+	}
+
+	.rootpage__contacts a {
+		color: #ebe691;
+	}
+
+	.rootpage__tnx {
+		background: #c22d63;
+		margin: 0px 0px 1rem 0px;
+	}
+</style>
+<body>
+	<div class="rootpage">
+		<h1>Верстка «ICanDo»</h1>
+		<div class="rootpage__info">
+			Особенности проекта
+		</div>
+		<h2>Готовые страницы:</h2>
+		<ol class="rootpage__list">
+			<li><a target="_blank" href="index.html">Главная</a></li>
+			<li><a target="_blank" href="order.html">Мои заказы</a></li>
+			<li><a target="_blank" href="create.html">Создать задание</a></li>
+			<li><a target="_blank" href="profile.html">Профиль</a></li>
+			<li><a target="_blank" href="find.html">Найти задание</a></li>
+			<li><a target="_blank" href="taskTitle.html">Просмотр задачи с главной</a></li>
+			<li><a target="_blank" href="taskDetails.html">Детали заказа</a></li>
+		</ol>
+		<h2>Попапы:</h2>
+		<ol class="rootpage__list">
+			<li>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#artistSelected">
+					Исполнитель выбран
+				</button>
+			</li>
+			<li>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#paymentDirectly">
+					Оплата напрямую
+				</button>
+			</li>
+			<li>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#missionCompleted">
+					Задание выполнено?
+				</button>
+			</li>
+			<li>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#taskCreated">
+					Ваше задание создано
+				</button>
+			</li>
+			<li>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#responseAccepted">
+					Спасибо Ваш отклик принят
+				</button>
+			</li>
+			<li>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#task">
+					Уборка в гараже
+				</button>
+			</li>
+		</ol>
+		<div class="rootpage__tnx">
+			<h2 class="m-0">Спасибо за заказ!</h2>
+			<p class="m-0">Буду радa хорошему отзыву.</p>
+			<p class="m-0">Обращайтесь еще!</p>
+		</div>
+		<div class="rootpage__contacts">
+			<h2 class="m-0">Мои контакты:</h2>
+			<p class="m-0">Телефон: <a href="tel:+79816503818">+7 981 650 38 18</a></p>
+		</div>
+	</div>
+	<!-- Модальное окно #artistSelected-->
+	<div class="modal fade" id="artistSelected" tabindex="-1" aria-labelledby="artistSelectedLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header p-0 mb-5">
+					<h5 class="modal-title" id="artistSelectedLabel">Исполнитель выбран</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body p-0">
+					<div class="modal-person">
+						<div class="modal-person__avatar">
+							<img src="img/avatar-modal.png" alt="avatar">
+						</div>
+						<p class="modal-person__name">Хоман </p>
+						<a href="tel:3589999999" class="modal-person__tel">+358 999- 99- 99 </a>
+					</div>
+					<div class="modal-text">
+						Теперь Хоман исполнитель вашего задания. Вы можете связаться
+						в чате и уточнить детали. Не забудьте оставить отзыв
+						о проделанной работе.
+					</div>
+				</div>
+				<div class="modal-footer p-0">
+					<button type="button" class="btn btn-secondary btn-green m-0" data-dismiss="modal">Хорошо</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Модальное окно #paymentDirectly-->
+	<div class="modal fade" id="paymentDirectly" tabindex="-1" aria-labelledby="paymentDirectlyLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header p-0 mb-5">
+					<h5 class="modal-title" id="paymentDirectlyLabel">Оплата напрямую</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body p-0">
+					<div class="modal-coast">
+						<div class="modal-coast-inner">
+							<p class="modal-coast-title m-0">Стоимость</p>
+							<p class="modal-coast-price m-0">3 000 ₽</p>
+						</div>
+						<p class="modal-coast-text">Вы напрямую договариваетесь с исполнителем об условиях и
+							способе оплаты.</p>
+					</div>
+					<div class="modal-text mb-4">
+						<span class="madal-attation">!</span>
+						Не совершайте предоплату без оформления договора или расписки
+					</div>
+					<div class="modal-text ">
+						<span class="madal-attation">!</span>
+						Если доверяете исполнителю ценности или пускаете в дом, зафиксируйте его паспортные данные
+					</div>
+				</div>
+				<div class="modal-footer p-0">
+					<button type="button" class="btn btn-secondary btn-green m-0" data-dismiss="modal">Выбрать исполнителем</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Модальное окно #missionCompleted-->
+	<div class="modal fade" id="missionCompleted" tabindex="-1" aria-labelledby="missionCompletedLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header p-0 ">
+					<h5 class="modal-title" id="missionCompletedLabel">Задание выполнено?</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body p-0">
+					<form action="">
+						<div class="modal-btn-control btn-control">
+							<button type="button" class="btn  btn-transparent ">Не выполнено</button>
+							<button type="button" class="btn  btn-green m-0">Выполнено</button>
+						</div>
+
+						<div class="comment-person mt-4">
+							<div class="comment-person__avatar">
+								<img src="img/avatar-big.png" alt="avatar">
+							</div>
+							<div class="comment-person__info">
+								<div class="comment-person__name">Игнат</div>
+								<div class="comment-person__recomendation _icon-feedback">Отзывы: 4</div>
+							</div>
+						</div>
+						<div class="comment m-0">
+							<div class="comment__rating ">
+								<div class="rating rating_set">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input type="radio" class="rating__item" value="1" name="rating">
+											<input type="radio" class="rating__item" value="2" name="rating">
+											<input type="radio" class="rating__item" value="3" name="rating">
+											<input type="radio" class="rating__item" value="4" name="rating">
+											<input type="radio" class="rating__item" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">3.6</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<textarea class="form-control  m-0 modal-textarea" rows="3" placeholder="Оставьте отзыв"></textarea>
+							<button type="submit" class="_icon-send modal-textarea-btn"></button>
+						</div>
+
+					</form>
+
+				</div>
+				<div class="modal-footer p-0">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Модальное окно #taskCreated-->
+	<div class="modal fade" id="taskCreated" tabindex="-1" aria-labelledby="taskCreatedLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header p-0 ">
+					<h5 class="modal-title" id="taskCreatedLabel">Ваше задание <span>создано</span> </h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body p-0 _icon-checkmark-circle">
+				</div>
+				<div class="modal-footer p-0">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Модальное окно #responseAccepted-->
+	<div class="modal fade" id="responseAccepted" tabindex="-1" aria-labelledby="responseAcceptedLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header p-0 ">
+					<h5 class="modal-title" id="responseAcceptedLabel"><span>Спасибо</span><br>
+						Ваш отклик принят</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body p-0 _icon-checkmark-circle">
+				</div>
+				<div class="modal-footer p-0">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Модальное окно #task-->
+	<div class="modal fade" id="task" tabindex="-1" aria-labelledby="taskLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header p-0 ">
+					<h6 class="modal-title" id="taskLabel">Уборка в гараже</h6>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body p-0 ">
+					<form action="">
+						<div class="modal-text-offer">Заказчик предлагает до <span class="modal-text-offer-price _icon-euro">300</span> </div>
+						<div class="form-group">
+							<label for="exampleFormControlInput101">Предложите свою цену</label>
+							<input type="text" class="form-control" id="exampleFormControlInput101" placeholder=" ..." value="600 P">
+						</div>
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">Описание отклика</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Укажите свой опыт работы, расскажите. почему именно вы должны стать исполнителем этого задания"></textarea>
+						</div>
+						<button type="button" class="btn btn-secondary btn-green " data-dismiss="modal">Откликнуться</button>
+					</form>
+
+				</div>
+				<div class="modal-footer p-0">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230208102627"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js?_v=20230208102627" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js?_v=20230208102627" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
